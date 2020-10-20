@@ -6,5 +6,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./update.component.css']
 })
 export class updateComponent {
-  title = 'Travel App via Ximan Liu';
+  title = 'Price Calculator';
+
+  lhs = 0;
+  rhs = 150;
+  result = 0;
+  operator = '*';
+
+  recalc(): void {
+    console.log(this.operator);
+    const op = this.operator.charAt(0);
+    console.log(op);
+    while  (op === '*') {
+      console.log('multiply');
+      this.result = this.lhs * this.rhs;
+    }
+  }
 }
