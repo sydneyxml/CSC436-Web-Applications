@@ -1,0 +1,35 @@
+<div class="container">
+  <form>
+    <div class="form-group row">
+      <label for="origination" class="col-form-label">Origination Airport</label>
+      <div class="col">
+        <input required [(ngModel)]="origination" id="origination" name="origination" type="text"
+          class="form-control" />
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="destination" class="col-form-label">Destination Airport</label>
+      <div class="col">
+        <input required [(ngModel)]="destination" id="destination" name="destination" type="text"
+          class="form-control" />
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-form-label">Travel Date</label>
+      <div class="col">
+        <input required [(ngModel)]="travelDate" id="travelDate" name="travelDate" type="date" class="form-control" />
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-form-label"># of Travelers</label>
+      <div class="col">
+        <input required [(ngModel)]="numTravelers" id="numTravelers" name="numTravelers" type="number"
+          class="form-control" />
+      </div>
+    </div>
+    <input (click)="calculatePrice()" type="submit" class="btn btn-primary" />
+  </form>
+</div>
+<div class="container">
+  <label class="col-form-label">Travel Price = {{price | currency}}</label>
+</div>
